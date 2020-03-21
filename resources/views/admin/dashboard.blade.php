@@ -85,7 +85,7 @@
           <li>
             <a href="./tables.html">
               <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>Table List</p>
+              <p>Table Listt</p>
             </a>
           </li>
           <li>
