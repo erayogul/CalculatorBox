@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('admin.homepage');
 });
 
+Route::get('sample', function () {
+    return view('admin.user');
+});
+
 Route::get('temperature', function () {
     return view('admin.temperature');
 });
@@ -29,8 +33,8 @@ Route::get('area', function () {
     return view('admin.area');
 });
 
-Route::get('volume', function () {
-    return view('admin.volume');
+Route::get('speed', function () {
+    return view('admin.speed');
 });
 
 Route::get('weight', function () {

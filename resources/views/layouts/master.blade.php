@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <link rel="icon" type="image/svg" href="../assets/img/calculator-solid.svg">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
       @yield('title')
@@ -84,9 +84,9 @@
           @else
             <li>
           @endif
-            <a href="volume">
-              <i class="fas fa-volume-up"></i>
-              <p>Volume</p>
+            <a href="speed">
+              <i class="fas fa-tachometer-alt"></i>
+              <p>Speed</p>
             </a>
           </li>
 
@@ -150,9 +150,9 @@
       </nav>
       <!-- End Navbar -->
 
-      @yield('content')
 
-      <div class="content">
+
+      <div style="margin-top:75px;" class="content">
         @yield('content')
       </div>
 
