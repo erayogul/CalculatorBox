@@ -188,3 +188,76 @@ function hexToRGB(hex, alpha) {
     return "rgb(" + r + ", " + g + ", " + b + ")";
   }
 }
+
+
+
+function convertTemperature(){
+
+  var temperatureFromText = Number(document.getElementById('temperatureFromText').value);
+  var temperatureFrom = document.getElementById('temperatureFrom').value;
+  var temperatureTo = document.getElementById('temperatureTo').value;
+  var temperatureToText = document.getElementById('temperatureToText');
+
+  if(temperatureFromText!=""){
+
+    var NewKelvinValue = temperature_ToKelvin(temperatureFrom,temperatureFromText);
+
+    switch(temperatureTo) {
+      case "1":
+         temperatureToText.value = temperature_CelciusToKelvin(NewKelvinValue, false);
+        break;
+      case "2":
+         temperatureToText.value = temperature_FahreneithToKelvin(NewKelvinValue, false);
+        break;
+      case "3":
+        temperatureToText.value = NewKelvinValue;
+        break;
+      default:
+        alert("it is not possible :(");
+    }
+
+  }
+  else {
+    alert("Please enter some information :)");
+  }
+
+}
+
+function temperature_ToKelvin(temperature_from, temperatur_Text){
+
+  switch(temperature_from) {
+    case "1":
+       return temperature_CelciusToKelvin(temperatur_Text,true);
+      break;
+    case "2":
+       return temperature_FahreneithToKelvin(temperatur_Text,true);
+      break;
+    case "3":
+      return temperatur_Text;
+      break;
+    default:
+      alert("it is not possible :(");
+  }
+
+}
+
+function temperature_CelciusToKelvin(temperature_Text, control){
+
+  if(control == true){
+  return temperature_Text+273.15;
+  }
+  else{
+    return temperature_Text-273.15;
+  }
+
+}
+
+function temperature_FahreneithToKelvin(temperature_Text, control){
+  if(control == true){
+    return temperature_Text+255.927778;
+  }
+  else{
+    return temperature_Text-255.927778;
+  }
+
+}

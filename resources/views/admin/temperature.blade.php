@@ -15,33 +15,50 @@
           <hr>
         </div>
         <div  class="card-body">
+            <center>
 
-          <center>
+              <p>From</p>
 
+              <div style="max-width:500px;" class="input-group">
+                <input id="temperatureFromText" type="text" class="form-control">
+                  <select style="max-width:200px;" class="custom-select" id="temperatureFrom">
+                    <option value="1">Celsius (°C)</option>
+                    <option value="2">Fahreneith (°F)</option>
+                    <option value="3">Kelvin (°K)</option>
+                  </select>
+              </div>
 
-      <select multiple="multiple" id="example" name="example[]">
+              <p>To</p>
 
-        <option value="option 1">Option 1</option>
+              <div style="max-width:500px;" class="input-group">
+                <input id="temperatureToText" type="text" readonly class="form-control">
+                  <select style="max-width:200px;" class="custom-select" id="temperatureTo">
+                    <option value="1">Celsius (°C)</option>
+                    <option value="2">Fahreneith (°F)</option>
+                    <option value="3">Kelvin (°K)</option>
+                  </select>
+              </div>
 
-        <option value="option 2">Option 2</option>
+              <button id="temperatureConverter"type="button" onclick="convertTemperature()" class="btn btn-primary">Convert</button>
 
-        <option value="option 3">Option 3</option>
-
-        <option value="option 4">Option 4</option>
-
-
-
-        <option value="option n">Option n</option>
-
-      </select>
-
-
-          </center>
-
+            </center>
         </div>
         </div>
   </div>
 </div>
+
+<script>
+
+var input = document.getElementById("temperatureFromText");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("temperatureConverter").click();
+  }
+});
+
+</script>
+
 @endsection
 
 @section('scripts')
