@@ -33,8 +33,8 @@ Route::get('area', function () {
     return view('admin.area');
 });
 
-Route::get('speed', function () {
-    return view('admin.speed');
+Route::get('volume', function () {
+    return view('admin.volume');
 });
 
 Route::get('weight', function () {

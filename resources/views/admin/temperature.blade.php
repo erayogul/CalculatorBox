@@ -20,9 +20,9 @@
               <p>From</p>
 
               <div style="max-width:500px;" class="input-group">
-                <input id="temperatureFromText" type="text" class="form-control">
-                  <select style="max-width:200px;" class="custom-select" id="temperatureFrom">
-                    <option value="1">Celsius (°C)</option>
+                <input oninput="convertTemperature();" id="temperatureFromText" type="text" class="form-control">
+                  <select onChange="convertTemperature();" style="max-width:200px;" class="custom-select" id="temperatureFrom">
+                    <option selected value="1">Celsius (°C)</option>
                     <option value="2">Fahreneith (°F)</option>
                     <option value="3">Kelvin (°K)</option>
                   </select>
@@ -32,14 +32,15 @@
 
               <div style="max-width:500px;" class="input-group">
                 <input id="temperatureToText" type="text" readonly class="form-control">
-                  <select style="max-width:200px;" class="custom-select" id="temperatureTo">
+                  <select onChange="convertTemperature();" style="max-width:200px;" class="custom-select" id="temperatureTo">
                     <option value="1">Celsius (°C)</option>
-                    <option value="2">Fahreneith (°F)</option>
+                    <option selected value="2">Fahreneith (°F)</option>
                     <option value="3">Kelvin (°K)</option>
                   </select>
               </div>
 
-              <button id="temperatureConverter"type="button" onclick="convertTemperature()" class="btn btn-primary">Convert</button>
+              <button id="temperatureConverter"type="button"  onclick="convertTemperature()" class="btn btn-primary">Convert</button>
+            <!--  <button type="button" onclick="clear_all()" class="btn btn-danger btn-sm">Clear</button> -->
 
             </center>
         </div>

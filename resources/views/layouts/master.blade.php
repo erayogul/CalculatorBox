@@ -84,9 +84,9 @@
           @else
             <li>
           @endif
-            <a href="speed">
-              <i class="fas fa-tachometer-alt"></i>
-              <p>Speed</p>
+            <a href="volume">
+              <i class="fas fa-box"></i>
+              <p>Volume</p>
             </a>
           </li>
 
@@ -201,6 +201,7 @@
   <script src="../assets/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/now-ui-dashboard.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../assets/js/calculatorbox.js" type="text/javascript"></script>
 @yield('scripts')
 </body>
 
